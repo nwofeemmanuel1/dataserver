@@ -3,7 +3,8 @@ const Router=express.Router()
  const validateButtonData= require("../validations/validateInputKeyData")
 const ButtonClickData=require("../model/saveButtonInputData")
 Router.post("/",async(req,res)=>{
-    console.log(req.body)
+    // console.log(req.body)
+     //  console 
 //   console.log(req.socket.remoteAddress)
   const inputIsvalid=  validateButtonData(req.body)
    if(inputIsvalid !==true)return res.status(400).json({error:true,errMessage:inputIsvalid})

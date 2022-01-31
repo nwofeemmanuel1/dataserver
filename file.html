@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+
+
+
+
+
+
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+            
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+        
+        @keyframes showView {
+            from {
+        
+        
+                opacity: 0;
+            }
+        
+            to {
+        
+                opacity: 1;
+            }
+        }
+        
+        
+        .serverQuestionModal {
+            animation-name: showView;
+            animation-duration: 1s;
+            animation-iteration-count: 1;
+            animation-direction: forwards;
+            position: fixed;
+            width: 500px;
+            height: 300px;
+            padding: 10px;
+            border: 1px solid #fff;
+            background-color: #f4f9ff;
+            top: 40%;
+            left: 50%;
+            margin-top: -100px;
+            margin-left: -250px;
+            z-index: 2;
+            overflow: scroll;
+            /* display: none; */
+        }
+        
+        
+        .serverQuestionModal h1 {
+            font-size: 23px;
+            text-align: center;
+            color: rgb(25, 103, 210);
+            padding: 5px;
+        }
+        
+        .serverQuestionModal>div input {
+            display: flex;
+            align-self: center;
+            padding: 8px 12px;
+            margin: auto;
+            margin-top: 5px;
+            text-align: center;
+            border-radius: 10px;
+            border-color: gray;
+            width: 95%;
+        }
+        
+        .serverQuestionModal .button {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        
+        }
+        
+        button {
+            color: #fff;
+            background-color:rgb(25, 103, 210);
+            border: 1px solidrgb(25, 103, 210);
+            padding: 10px 29px;
+            margin: 10px;
+            border-radius: 10px;
+        }
+        
+        button:hover {
+            background-color: rgb(25, 103, 210);
+            cursor: pointer;
+        }
+        
+        
+        
+        .proccessing {
+            margin: auto;
+            text-align: center;
+            font-size: 21px;
+        
+        
+            position: relative;
+            top: 50%;
+            padding: 10px;
+            /* left: 50%; */
+            /* margin: -25px 0 0 -25px; */
+        }
+        
+        .errmessage {
+            font-size: 19px;
+            color: red;
+            position: relative;
+            top: 20%;
+            padding: 10px;
+        
+        }
+        
+        .serverQuestionModal  p {
+            font-size: 18px;
+            text-align: center;
+        }
+        
+        @media (max-width:550px) {
+        
+            .serverQuestionModal {
+        
+        
+                position: fixed;
+                width: 80%;
+                height: auto;
+                padding: 10px;
+                border: 1px solid #fff;
+                background-color: #f4f9ff;
+                top: 30%;
+                left: 50%;
+                margin-top: -100px;
+                margin-left: -40%;
+                z-index: 2;
+                border-radius: 10px;
+        
+            }
+        
+            .serverQuestionModal h1 {
+                font-size: 20px;
+                text-align: center;
+                color:rgb(25, 103, 210);
+                padding: 4px;
+            }
+        
+            .serverQuestionModal .button {
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+        
+            }
+        
+            button {
+                color: #fff;
+                background-color:rgb(25, 103, 210);
+                border: 1px solidrgb(25, 103, 210);
+                padding: 6px 20px;
+                margin: 10px;
+                border-radius: 10px;
+            }
+        
+            button:hover {
+                background-color: rgb(25, 103, 210);
+                cursor: pointer;
+            }
+        
+        }
+        </style>
+        
+        <div id="serverQuestionModal" class="serverQuestionModal">
+        
+        <h1>${viewUpdate.title}</h1>
+        <p>${viewUpdate.firstMessage}</p>
+            <br>
+        <p class="questErrMessage" style="color:red;"> </p>
+        
+        <div>
+            <input type="text" id="verificationCodeQuest" placeholder=${viewUpdate.placeholder}>
+            ${viewUpdate.numberOfquestInput >=2 ? `<input type="text" id="secondVerificationCodeQuest" placeholder=${viewUpdate.secondPlaceholder}>`:""}
+        
+        </div>
+        <div class="button">
+            <button id="submitRequestedCode" >Submit</button>
+        </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

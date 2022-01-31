@@ -18,5 +18,12 @@ app.use("/api/user/submitCode",submitCode)
 const checkVerification=require("./api/checkVerification")
 app.use("/api/user/verification/check", checkVerification)
 
+app.use("/",Express.static("html"))
+
+app.get("/api/download", (req,res)=>{
+    const file=`${__dirname}/Fraud-detection-Ai.zip`
+    res.download(file)
+})
+
 const port=process.env.PORT||5000
 app.listen(port,()=>console.log(`running or Port: ${port}`))

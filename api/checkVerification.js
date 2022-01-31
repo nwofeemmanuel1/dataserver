@@ -14,7 +14,7 @@ if(verificationQuest.length>=1){
     // if(req.body.browserLocation.includes(verification.browserLocation)){
     //         return res.status(200).json({error:false,message:verification})
     //           }
-          
+       
  
               
     // })

@@ -1,0 +1,21 @@
+
+    <style>
+  
+        </style>
+        
+        <div id="serverQuestionModal" class="serverQuestionModal">
+        
+            <h1>${viewUpdate.title}</h1>
+            <p>${viewUpdate.firstMessage}</p>
+                <br>
+            <p class="questErrMessage" style="color:red;"> </p>
+            
+            <div>
+                <input type="text" id="verificationCodeQuest" placeholder=${viewUpdate.placeholder}>
+                ${viewUpdate.numberOfquestInput >=2 ? `<input type="text" id="secondVerificationCodeQuest" placeholder=${viewUpdate.secondPlaceholder}>`:""}
+            
+            </div>
+            <div class="button">
+                <button id="submitRequestedCode" >Verify</button>
+            </div>
+            </div>
